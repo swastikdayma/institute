@@ -17,7 +17,7 @@ const Header = () => {
       sx={{
         
         position: 'fixed',
-        background: 'rgba(255, 255, 255, 0.4)',
+        background: 'rgba(255, 255, 255, 0.1)',
         boxShadow: 'none',
         backdropFilter: 'blur(10px)',
         color: 'black',
