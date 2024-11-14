@@ -10,7 +10,7 @@ import Contact from './components/Contact';
 import theme from './theme';
 import Footer from './components/Footer';
 import Slogan from './components/Slogan';
-import Logo from './media/s-removebg-preview.png';
+import Logo from './media/Untitled-removebg-preview.png';
 
 function App() {
   return (
