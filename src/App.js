@@ -24,7 +24,11 @@ function App() {
           backgroundPosition: 'center',
           minHeight: '100vh',
           overflowX: 'hidden', // Prevents horizontal scroll
-          overflowY:'hidden'
+          overflowY:'hidden',
+          '@media (max-width: 600px)': {
+            backgroundAttachment: 'scroll', // Scroll for small screens
+            backgroundSize: 'auto', // Adjust the background size for small screens
+          },
         }}
       >
         {/* Main App Content */}
