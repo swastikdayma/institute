@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Header from './components/Header';
+import AboutUs from './components/AboutUs';
+import Courses from './components/Courses';
+import Offer from './components/Offer';
+import Contact from './components/Contact';
+import theme from './theme';
+import Footer from './components/Footer';
+import Slogan from './components/Slogan';
+import Logo from './media/s-removebg-preview.png';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline /> {/* Reset and apply base styles */}
+      <div
+        style={{
+          backgroundImage: `url(${Logo})`,
+          backgroundAttachment: 'fixed', // Keeps background fixed
+          backgroundSize: 'cover', // Ensures it covers entire viewport
+          backgroundPosition: 'center',
+          minHeight: '100vh',
+          overflowX: 'hidden', // Prevents horizontal scroll
+        }}
+      >
+        {/* Main App Content */}
+        <Header />
+        <Slogan />
+        <AboutUs />
+        <Courses />
+        <Offer />
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
