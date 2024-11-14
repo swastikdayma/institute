@@ -44,9 +44,10 @@ function App() {
         {`
           @media (max-width: 600px) {
             div {
-              backgroundAttachment: 'scroll'; /* Change background attachment for mobile */
-              backgroundSize: 'auto'; /* Ensure no zoom on mobile */
-              backgroundPosition: 'center top'; /* Positioning for mobile */
+              // backgroundAttachment: 'scroll'; /* Change background attachment for mobile */
+              // backgroundSize: 'auto'; /* Ensure no zoom on mobile */
+              // backgroundPosition: 'center top'; /* Positioning for mobile */
+               backgroundImage: 'none'; 
             }
           }
         `}
