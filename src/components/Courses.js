@@ -118,7 +118,7 @@ const Courses = () => {
           {courses.map((course, index) => (
             <Grid
               item
-              xs={12} sm={8} md={4}
+              xs={12} sm={6} md={4}
               key={index}
               sx={{
                 display: 'flex',
