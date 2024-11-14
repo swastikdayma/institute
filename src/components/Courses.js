@@ -103,7 +103,7 @@ const Courses = () => {
 
         <Grid
           container
-          spacing={4}
+          spacing={3}
           justifyContent="center"
           sx={{
             maxWidth: '1200px',
