@@ -24,6 +24,7 @@ function App() {
           backgroundPosition: 'center',
           minHeight: '100vh',
           overflowX: 'hidden', // Prevents horizontal scroll
+          overflowY:'hidden'
         }}
       >
         {/* Main App Content */}
