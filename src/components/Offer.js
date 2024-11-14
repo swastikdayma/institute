@@ -19,7 +19,7 @@ const Offer = () => (
   id={"What We Offer"}
     my={4}
     sx={{
-      backgroundColor:'rgba(244, 248, 251, 0.7)', // Light neutral background
+      backgroundColor: 'rgba(255, 255, 255, 0.1)', // Light neutral background
       padding: '50px',
       borderRadius: '12px',
       boxShadow: '0 6px 12px rgba(0,0,0,0.1)',

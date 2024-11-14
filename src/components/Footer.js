@@ -7,7 +7,7 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        backgroundColor:  'rgba(255, 255, 255, 0.4)', // Transparent orange color
+        backgroundColor:  'rgba(255, 255, 255, 0.1)', // Transparent orange color
         color: '#000',
         py: 2,
         textAlign: 'center',

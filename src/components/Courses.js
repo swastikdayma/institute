@@ -69,7 +69,7 @@ const Courses = () => {
           borderRadius: '10px',
           padding: "50px",
           paddingBottom: '50px',
-          backgroundColor:'rgba(244, 248, 251, 0.7)', // Set background color to transparent
+          backgroundColor: 'rgba(255, 255, 255, 0.1)', // Set background color to transparent
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

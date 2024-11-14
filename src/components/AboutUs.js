@@ -18,7 +18,7 @@ const AboutUs = () => {
         textAlign="center"
         sx={{
           color: 'black', // Text color
-          backgroundColor: 'rgba(244, 248, 251, 0.7)', // Light blue-gray background with transparency
+          backgroundColor: 'rgba(255, 255, 255, 0.1)', // Light blue-gray background with transparency
           position: 'relative',
           paddingTop: '80px', // For spacing the section below sticky header
           transition: 'all 0.5s ease', // Smooth transition for all properties

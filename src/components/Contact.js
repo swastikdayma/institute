@@ -17,7 +17,7 @@ const ContactUs = () => {
         p={3}
         textAlign="center"
         sx={{
-          backgroundColor:'rgba(244, 248, 251, 0.7)', // Soft orange background for the whole section
+          backgroundColor: 'rgba(255, 255, 255, 0.1)', // Soft orange background for the whole section
           borderRadius: '8px',
           marginTop:0,
           marginBottom:0 
