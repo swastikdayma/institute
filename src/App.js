@@ -25,10 +25,10 @@ function App() {
           minHeight: '100vh',
           overflowX: 'hidden', // Prevents horizontal scroll
           overflowY:'hidden',
-          '@media (max-width: 600px)': {
-            backgroundAttachment: 'scroll', // Scroll for small screens
-            backgroundSize: 'auto', // Adjust the background size for small screens
-          },
+          // '@media (max-width: 600px)': {
+          //   backgroundAttachment: 'scroll', // Scroll for small screens
+          //   backgroundSize: 'auto', // Adjust the background size for small screens
+          // },
         }}
       >
         {/* Main App Content */}
@@ -40,6 +40,17 @@ function App() {
         <Contact />
         <Footer />
       </div>
+      <style>
+        {`
+          @media (max-width: 600px) {
+            div {
+              backgroundAttachment: 'scroll'; /* Change background attachment for mobile */
+              backgroundSize: 'auto'; /* Ensure no zoom on mobile */
+              backgroundPosition: 'center top'; /* Positioning for mobile */
+            }
+          }
+        `}
+      </style>
     </ThemeProvider>
   );
 }
