@@ -144,7 +144,7 @@ const Courses = () => {
                     transition: 'transform 0.3s ease, background-color 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.05)',
-                      backgroundColor: '#FFEA00',
+                      backgroundColor: '#fff2cc',
                     },
                     display: 'flex',
                     flexDirection: 'column',

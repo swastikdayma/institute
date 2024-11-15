@@ -63,23 +63,31 @@ const AboutUs = () => {
           </Typography>
         </motion.div>
 
-        <Typography
-          variant="body1"
-          paragraph
-          sx={{
-            color: 'grey',
-            fontWeight: 'bold',
-            fontSize: { xs: '0.9rem', sm: '1rem' },
-            transition: 'font-size 0.5s ease-in-out',
-            maxWidth: '800px',
-            margin: '20px auto',
-          }}
+        {/* About Us Description with Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
         >
-          Swastik IT Solutions is dedicated to providing high-quality, hands-on IT training that prepares
-          students for the rapidly evolving tech industry. With a focus on practical knowledge, real-world
-          applications, and 100% placement assistance, our institute ensures that students are job-ready and
-          equipped for success.
-        </Typography>
+          <Typography
+            variant="body1"
+            paragraph
+            sx={{
+              color: 'grey',
+              fontWeight: 'bold',
+              fontSize: { xs: '0.9rem', sm: '1rem' },
+              transition: 'font-size 0.5s ease-in-out',
+              maxWidth: '800px',
+              margin: '20px auto',
+            }}
+          >
+            Swastik IT Solutions is dedicated to providing high-quality, hands-on IT training that prepares
+            students for the rapidly evolving tech industry. With a focus on practical knowledge, real-world
+            applications, and 100% placement assistance, our institute ensures that students are job-ready and
+            equipped for success. We pride ourselves on creating a learning environment that fosters creativity,
+            problem-solving, and innovation.
+          </Typography>
+        </motion.div>
 
         {/* Responsive Grid for Cards */}
         <Grid
@@ -110,7 +118,7 @@ const AboutUs = () => {
                   transition: 'transform 0.3s ease, background-color 0.3s ease',
                   '&:hover': {
                     transform: 'scale(1.05)',
-                    backgroundColor: '#FFEA00',
+                    backgroundColor: '#fff2cc',
                   },
                   display: 'flex',
                   flexDirection: 'column',
@@ -124,7 +132,8 @@ const AboutUs = () => {
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#5F6368' }}>
                   Our mission is to empower individuals with the practical skills, hands-on experience, and
-                  knowledge they need to thrive in the ever-evolving tech industry...
+                  knowledge they need to thrive in the ever-evolving tech industry. We aim to bridge the gap
+                  between education and employment through high-quality training and 100% placement assistance.
                 </Typography>
               </Paper>
             </motion.div>
@@ -148,7 +157,7 @@ const AboutUs = () => {
                   transition: 'transform 0.3s ease, background-color 0.3s ease',
                   '&:hover': {
                     transform: 'scale(1.05)',
-                    backgroundColor: '#FFEA00',
+                    backgroundColor: '#fff2cc',
                   },
                   display: 'flex',
                   flexDirection: 'column',
@@ -162,7 +171,47 @@ const AboutUs = () => {
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#5F6368' }}>
                   Our instructors are industry experts with years of experience in fields like web
-                  development, data science, AI, and cybersecurity...
+                  development, data science, AI, and cybersecurity. They are passionate about teaching and
+                  committed to helping students succeed in their careers.
+                </Typography>
+              </Paper>
+            </motion.div>
+          </Grid>
+
+          {/* Column 3: Our Vision */}
+          <Grid item xs={12} sm={6} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
+            >
+              <Paper
+                elevation={3}
+                sx={{
+                  padding: '20px',
+                  backgroundColor: '#fff',
+                  color: 'black',
+                  borderRadius: '16px',
+                  boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                  transition: 'transform 0.3s ease, background-color 0.3s ease',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    backgroundColor: '#fff2cc',
+                  },
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  height: '100%',
+                  maxWidth: '100%',
+                }}
+              >
+                <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', color: '#FF7043' }}>
+                  Our Vision
+                </Typography>
+                <Typography variant="body1" sx={{ color: '#5F6368' }}>
+                  Our vision is to be a leading provider of IT training that equips students with cutting-edge
+                  skills for the tech industry, fostering innovation, and success. We strive to create a
+                  lasting impact on the lives of our students and the industry as a whole.
                 </Typography>
               </Paper>
             </motion.div>
