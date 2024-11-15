@@ -45,7 +45,9 @@ const Offer = () => (
           color: '#2D2B7F', // Dark blue color for the heading
           marginBottom: '40px',
           textTransform: 'uppercase',
-          fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }, // Responsive font size
+          fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },// Responsive font size
+          backgroundImage: `url(${teachingImg})`, 
+          backgroundAttachment: 'fixed',
         }}
       >
         What We Offer
