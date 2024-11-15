@@ -17,7 +17,7 @@ const AboutUs = () => {
         p={3}
         textAlign="center"
         sx={{
-          color: 'black', // Text color
+          color: 'brown', // Text color
           backgroundColor: 'rgba(255, 255, 255, 0.1)', // Light background with transparency
           position: 'relative',
           paddingTop: '80px', // For spacing the section below sticky header
