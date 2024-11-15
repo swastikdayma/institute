@@ -31,7 +31,7 @@ function App() {
           '-webkit-background-size': 'cover',
           backgroundSize: 'cover',
           '@media (max-width: 600px)': {
-            backgroundImage: 'none', // Remove background image on small screens
+            // backgroundImage: 'none', // Remove background image on small screens
           },
         }}
       >
