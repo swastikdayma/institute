@@ -11,7 +11,7 @@ import theme from './theme';
 import Footer from './components/Footer';
 import Slogan from './components/Slogan';
 import Logo from './media/Untitled-removebg-preview.png';
-import { Box } from '@mui/material'; // Add Box component from MUI
+import { Box } from '@mui/material';
 
 function App() {
   const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent); // Check if the device is iOS
@@ -22,16 +22,16 @@ function App() {
       <Box
         sx={{
           backgroundImage: `url(${Logo})`,
-          backgroundAttachment: isIOS ? 'scroll' : 'fixed', // Fallback for iOS devices
-          backgroundSize: 'cover',
+          backgroundAttachment: isIOS ? 'scroll' : 'fixed', // Use scroll for iOS to avoid background scaling issues
+          backgroundSize: isIOS ? 'contain' : 'cover', // Use "contain" for better scaling on iOS
+          backgroundRepeat: 'no-repeat', // Prevent tiling of the background
           backgroundPosition: 'center',
           minHeight: '100vh',
           overflowX: 'hidden',
-          // WebKit fix for Safari/iOS
-          '-webkit-background-size': 'cover',
-          backgroundSize: 'cover',
+          '-webkit-background-size': isIOS ? 'contain' : 'cover', // WebKit fix for Safari/iOS
           '@media (max-width: 600px)': {
-            // backgroundImage: 'none', // Remove background image on small screens
+            backgroundAttachment: 'scroll', // Fallback for small screens
+            backgroundSize: 'contain', // Ensure proper scaling on smaller screens
           },
         }}
       >

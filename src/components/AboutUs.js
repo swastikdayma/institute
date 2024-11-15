@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 import BackgroundImage from '../media/4669613.jpg'; // Import your background image
 
 const AboutUs = () => {
+  // Detect iOS device
+  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -17,21 +20,26 @@ const AboutUs = () => {
         p={3}
         textAlign="center"
         sx={{
-          color: 'black', // Text color
-          backgroundColor: 'rgba(255, 255, 255, 0.1)', // Light background with transparency
+          color: 'black',
+          backgroundColor: 'rgba(255, 255, 255, 0.1)',
           position: 'relative',
-          paddingTop: '80px', // For spacing the section below sticky header
-          transition: 'all 0.5s ease', // Smooth transition for all properties
+          paddingTop: '80px',
+          transition: 'all 0.5s ease',
           marginTop: 0,
           marginBottom: 0,
-          
-          // Set background image and other properties
+
+          // Background settings
           backgroundImage: `url(${BackgroundImage})`,
-          backgroundSize: 'cover', // Ensures the image covers the entire section
-          backgroundPosition: 'center top', // Centers the image
+          backgroundSize: 'cover', // Default for desktop
+          backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed', // Prevents repeating of the image
-          height: 'auto', // Adjust height to content size or set a specific height if needed
+          backgroundAttachment: isIOS ? 'scroll' : 'fixed', // Fallback for iOS
+
+          // Fix for smaller devices
+          '@media (max-width: 768px)': {
+            backgroundSize: 'contain', // Adjust for smaller devices
+            backgroundAttachment: 'scroll', // Avoid issues on iOS
+          },
         }}
       >
         {/* Animated Heading */}
@@ -44,11 +52,11 @@ const AboutUs = () => {
             variant="h4"
             gutterBottom
             sx={{
-              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }, // Responsive font size
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
               fontWeight: 'bold',
-              color: '#2D2B7F', // Dark purple color for heading
+              color: '#2D2B7F',
               textTransform: 'uppercase',
-              transition: 'font-size 0.5s ease-in-out', // Smooth font size transition
+              transition: 'font-size 0.5s ease-in-out',
             }}
           >
             About Us
@@ -60,11 +68,11 @@ const AboutUs = () => {
           paragraph
           sx={{
             color: 'brown',
-            fontWeight:'bold',
+            fontWeight: 'bold',
             fontSize: { xs: '0.9rem', sm: '1rem' },
             transition: 'font-size 0.5s ease-in-out',
             maxWidth: '800px',
-            margin: '20px auto', // Center the text
+            margin: '20px auto',
           }}
         >
           Swastik IT Solutions is dedicated to providing high-quality, hands-on IT training that prepares
@@ -115,7 +123,8 @@ const AboutUs = () => {
                   Our Mission
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#5F6368' }}>
-                  Our mission is to empower individuals with the practical skills, hands-on experience, and knowledge they need to thrive in the ever-evolving tech industry...
+                  Our mission is to empower individuals with the practical skills, hands-on experience, and
+                  knowledge they need to thrive in the ever-evolving tech industry...
                 </Typography>
               </Paper>
             </motion.div>
@@ -152,44 +161,8 @@ const AboutUs = () => {
                   Our Instructors
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#5F6368' }}>
-                  Our instructors are industry experts with years of experience in fields like web development, data science, AI, and cybersecurity...
-                </Typography>
-              </Paper>
-            </motion.div>
-          </Grid>
-
-          {/* Column 3: Why Choose Us */}
-          <Grid item xs={12} sm={6} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
-            <motion.div
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
-            >
-              <Paper
-                elevation={3}
-                sx={{
-                  padding: '20px',
-                  backgroundColor: '#fff',
-                  color: 'black',
-                  borderRadius: '16px',
-                  boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-                  transition: 'transform 0.3s ease, background-color 0.3s ease',
-                  '&:hover': {
-                    transform: 'scale(1.05)',
-                    backgroundColor: '#FFEA20',
-                  },
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between',
-                  height: '100%',
-                  maxWidth: '100%',
-                }}
-              >
-                <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', color: '#FF7043' }}>
-                  Why Choose Us
-                </Typography>
-                <Typography variant="body1" sx={{ color: '#5F6368' }}>
-                  Choosing Swastik IT Solutions means choosing a career-focused education...
+                  Our instructors are industry experts with years of experience in fields like web
+                  development, data science, AI, and cybersecurity...
                 </Typography>
               </Paper>
             </motion.div>
