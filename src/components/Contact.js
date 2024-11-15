@@ -81,7 +81,7 @@ Jaipur, Rajasthan 302020, India"
                 label="Email"
                 variant="outlined"
                 margin="normal"
-                value="info@swastikit.com"
+                value="swastik@swastikitsolutions.co.in"
                 InputProps={{
                   readOnly: true,
                   startAdornment: (
