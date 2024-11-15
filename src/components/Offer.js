@@ -3,7 +3,7 @@ import React from 'react';
 import { Typography, Box, Grid, Paper, ListItemText } from '@mui/material';
 import { motion } from 'framer-motion';
 import { CheckCircle, Work, Code, AccessAlarm, Help, School } from '@mui/icons-material'; // Example icons
-import handShake from '../media/Shake Hands, Hand, Business, Handshake PNG Transparent Clipart Image and PSD File for Free Download.jpeg'
+import teachingImg from '../media/6101073.jpg'
 // Offering data with icons
 const offerings = [
   { title: "100% Placement Assistance", description: "Guaranteed support for job placements.", icon: <CheckCircle sx={{ fontSize: 50, color: '#FF7043' }} /> },
@@ -23,7 +23,7 @@ const Offer = () => (
       padding: '50px',
       borderRadius: '12px',
       boxShadow: '0 6px 12px rgba(0,0,0,0.1)',
-      backgroundImage: `url(${handShake})`, // Background image URL (optional)
+      backgroundImage: `url(${teachingImg})`, // Background image URL (optional)
       backgroundSize: 'cover', // Ensure background covers the entire section
       backgroundPosition: 'center',
       backgroundAttachment: 'fixed',

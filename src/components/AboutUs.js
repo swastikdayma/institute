@@ -29,7 +29,8 @@ const AboutUs = () => {
           backgroundImage: `url(${BackgroundImage})`,
           backgroundSize: 'cover', // Ensures the image covers the entire section
           backgroundPosition: 'center top', // Centers the image
-          backgroundRepeat: 'no-repeat', // Prevents repeating of the image
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed', // Prevents repeating of the image
           height: 'auto', // Adjust height to content size or set a specific height if needed
         }}
       >
