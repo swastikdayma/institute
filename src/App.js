@@ -15,22 +15,22 @@ import Logo from './media/Untitled-removebg-preview.png';
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline /> {/* Reset and apply base styles */}
+      <CssBaseline /> 
       <div
         style={{
           backgroundImage: `url(${Logo})`,
-          backgroundAttachment: 'fixed', // Keeps background fixed
-          backgroundSize: 'cover', // Ensures it covers entire viewport
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
           backgroundPosition: 'center',
           minHeight: '100vh',
-          overflowX: 'hidden', // Prevents horizontal scroll
+          overflowX: 'hidden', 
         
           '@media (max-width: 600px)': {
-            backgroundImage: 'none', // Hide background on small screens
+            backgroundImage: 'none',
           },
         }}
       >
-        {/* Main App Content */}
+      
         <Header />
         <Slogan />
         <AboutUs />

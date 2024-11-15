@@ -1,7 +1,7 @@
-// src/components/AboutUs.js
 import React from 'react';
 import { Typography, Box, Grid, Paper } from '@mui/material';
 import { motion } from 'framer-motion';
+import BackgroundImage from '../media/4669613.jpg'; // Import your background image
 
 const AboutUs = () => {
   return (
@@ -18,12 +18,19 @@ const AboutUs = () => {
         textAlign="center"
         sx={{
           color: 'black', // Text color
-          backgroundColor: 'rgba(255, 255, 255, 0.1)', // Light blue-gray background with transparency
+          backgroundColor: 'rgba(255, 255, 255, 0.1)', // Light background with transparency
           position: 'relative',
           paddingTop: '80px', // For spacing the section below sticky header
           transition: 'all 0.5s ease', // Smooth transition for all properties
-          marginTop:0,
-          marginBottom:0 
+          marginTop: 0,
+          marginBottom: 0,
+          
+          // Set background image and other properties
+          backgroundImage: `url(${BackgroundImage})`,
+          backgroundSize: 'cover', // Ensures the image covers the entire section
+          backgroundPosition: 'center top', // Centers the image
+          backgroundRepeat: 'no-repeat', // Prevents repeating of the image
+          height: 'auto', // Adjust height to content size or set a specific height if needed
         }}
       >
         {/* Animated Heading */}
@@ -38,7 +45,7 @@ const AboutUs = () => {
             sx={{
               fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }, // Responsive font size
               fontWeight: 'bold',
-              color: '#2D2B7F', // Dark purple color for heading to add energy
+              color: '#2D2B7F', // Dark purple color for heading
               textTransform: 'uppercase',
               transition: 'font-size 0.5s ease-in-out', // Smooth font size transition
             }}
@@ -52,8 +59,9 @@ const AboutUs = () => {
           paragraph
           sx={{
             color: 'black',
+            fontWeight:'bold',
             fontSize: { xs: '0.9rem', sm: '1rem' },
-            transition: 'font-size 0.5s ease-in-out', // Smooth font size transition
+            transition: 'font-size 0.5s ease-in-out',
             maxWidth: '800px',
             margin: '20px auto', // Center the text
           }}
@@ -71,16 +79,16 @@ const AboutUs = () => {
           justifyContent="center"
           sx={{
             display: 'flex',
-            flexDirection: { xs: 'column', sm: 'row' }, // Stack vertically on mobile and horizontally on larger screens
-            alignItems: 'stretch', // Ensure all cards stretch to the same height
+            flexDirection: { xs: 'column', sm: 'row' },
+            alignItems: 'stretch',
           }}
         >
           {/* Column 1: Our Mission */}
           <Grid item xs={12} sm={6} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
             <motion.div
-              initial={{ opacity: 0, x: -100 }} // Starting position: off-screen left
-              whileInView={{ opacity: 1, x: 0 }} // Slide to original position on view
-              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }} // Smooth slide-in effect
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
             >
               <Paper
                 elevation={3}
@@ -93,20 +101,20 @@ const AboutUs = () => {
                   transition: 'transform 0.3s ease, background-color 0.3s ease',
                   '&:hover': {
                     transform: 'scale(1.05)',
-                    backgroundColor: '#FFEA00', // Yellow background on hover for fun and pop
+                    backgroundColor: '#FFEA00',
                   },
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  height: '100%', // Ensure card stretches to fill the available space
-                  maxWidth: '100%', // Ensure full width for responsiveness
+                  height: '100%',
+                  maxWidth: '100%',
                 }}
               >
                 <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', color: '#FF7043' }}>
                   Our Mission
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#5F6368' }}>
-                  Our mission is to empower individuals with the practical skills, hands-on experience, and knowledge they need to thrive in the ever-evolving tech industry. We believe in fostering a learning environment that balances theoretical foundations with real-world application, ensuring students leave our programs ready to excel in competitive job markets.
+                  Our mission is to empower individuals with the practical skills, hands-on experience, and knowledge they need to thrive in the ever-evolving tech industry...
                 </Typography>
               </Paper>
             </motion.div>
@@ -115,9 +123,9 @@ const AboutUs = () => {
           {/* Column 2: Our Instructors */}
           <Grid item xs={12} sm={6} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
             <motion.div
-              initial={{ opacity: 0, x: 100 }} // Starting position: off-screen right
-              whileInView={{ opacity: 1, x: 0 }} // Slide to original position on view
-              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }} // Smooth slide-in effect
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
             >
               <Paper
                 elevation={3}
@@ -130,20 +138,20 @@ const AboutUs = () => {
                   transition: 'transform 0.3s ease, background-color 0.3s ease',
                   '&:hover': {
                     transform: 'scale(1.05)',
-                    backgroundColor: '#FFEA00', // Yellow background on hover for fun and pop
+                    backgroundColor: '#FFEA00',
                   },
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  height: '100%', // Ensure card stretches to fill the available space
-                  maxWidth: '100%', // Ensure full width for responsiveness
+                  height: '100%',
+                  maxWidth: '100%',
                 }}
               >
                 <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', color: '#FF7043' }}>
                   Our Instructors
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#5F6368' }}>
-                  Our instructors are industry experts with years of experience in fields like web development, data science, AI, and cybersecurity. They are passionate about sharing their knowledge and providing mentorship to ensure that students not only learn the theory but gain hands-on experience with real-world applications.
+                  Our instructors are industry experts with years of experience in fields like web development, data science, AI, and cybersecurity...
                 </Typography>
               </Paper>
             </motion.div>
@@ -152,9 +160,9 @@ const AboutUs = () => {
           {/* Column 3: Why Choose Us */}
           <Grid item xs={12} sm={6} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
             <motion.div
-              initial={{ opacity: 0, x: -100 }} // Starting position: off-screen left
-              whileInView={{ opacity: 1, x: 0 }} // Slide to original position on view
-              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }} // Smooth slide-in effect
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
             >
               <Paper
                 elevation={3}
@@ -167,20 +175,20 @@ const AboutUs = () => {
                   transition: 'transform 0.3s ease, background-color 0.3s ease',
                   '&:hover': {
                     transform: 'scale(1.05)',
-                    backgroundColor: '#FFEA20', // Yellow background on hover for fun and pop
+                    backgroundColor: '#FFEA20',
                   },
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  height: '100%', // Ensure card stretches to fill the available space
-                  maxWidth: '100%', // Ensure full width for responsiveness
+                  height: '100%',
+                  maxWidth: '100%',
                 }}
               >
                 <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', color: '#FF7043' }}>
                   Why Choose Us
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#5F6368' }}>
-                  Choosing Swastik IT Solutions means choosing a career-focused education. We prioritize practical knowledge, 100% placement assistance, live projects, and lifetime access to course content. Our flexible learning model, offering both online and offline classes, combined with 24/7 support, ensures that every student gets the resources they need to succeed.
+                  Choosing Swastik IT Solutions means choosing a career-focused education...
                 </Typography>
               </Paper>
             </motion.div>
