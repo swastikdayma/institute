@@ -67,7 +67,7 @@ const AboutUs = () => {
           variant="body1"
           paragraph
           sx={{
-            color: 'brown',
+            color: 'black',
             fontWeight: 'bold',
             fontSize: { xs: '0.9rem', sm: '1rem' },
             transition: 'font-size 0.5s ease-in-out',
